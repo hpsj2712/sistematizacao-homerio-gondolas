@@ -129,7 +129,6 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 | Modelo / Tarefa | mAP@0.5 | mAP@0.5:0.95 (IoU) | Precisão | Recall |
 |---|---|---|---|---|
 | **YOLO11 Detecção original (Box)** | 0.3784 | 0.2195 | 0.5493 | 0.3685 |
-| **YOLO11 Renotação (Box)** | **0.5080** | **0.3381** | **0.5438** | **0.4899** |
 | **YOLO11 Segmentação (Mask)** | **0.4831** | **0.2553** | **0.5263** | **0.4722** |
 
 ### Insights Principais:
