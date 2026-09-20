@@ -163,6 +163,23 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 - **Fardo_caixa** é a classe mais estável, com poucos falsos positivos.  Cabendo ressaltar a baixa quantidade de identificação.
 
 
+### 🧠 Inferência Visual no Cenário Real
+
+Abaixo, exemplos de inferência do modelo YOLO11 Segmentação aplicados a imagens reais de gôndolas.  
+As detecções mostram o comportamento do sistema em diferentes condições de iluminação e densidade de produtos.
+
+<p align="center">
+  <img src="eval_results_fase4/segment_test_run/val_batch0_labels.jpg" width="300"/>
+  <img src="eval_results_fase4/segment_test_run/val_batch3_labels.jpg" width="300"/>
+  <img src="eval_results_fase4/segment_test_run/val_batch5_labels.jpg" width="300"/>
+</p>
+
+**Observações:**  
+- O modelo apresenta excelente desempenho na detecção de **garrafas** e **pacotes**.  
+- Há confusões ocasionais entre **vazio** e **pacote**, principalmente em prateleiras inferiores.  
+- A segmentação melhora o contorno dos objetos, reduzindo o ruído visual nas áreas sobrepostas.
+
+
 ## Artefatos de Avaliação
 
 Todos os resultados de teste (métricas, matrizes de confusão, amostras de inferência e logs) estão disponíveis no pacote:
@@ -190,11 +207,19 @@ Acesso ao Kaggle
 
 * Abra os Notebooks no ambiente Kaggle GPU.
 
+[Notebook Datasets](https://www.kaggle.com/code/homeriojr/sistematizacao-vis-o-computacional-datasets)
+
+[Notebook Treinos](https://www.kaggle.com/code/homeriojr/sistematizacao-visao-computacional-treino)
+
 * Certifique-se de montar o dataset homeriojr/sistematizacao-visao-computacional.
 
 * Execute o Notebook de Pré-processamento e Geração de Máscaras via SAM.
 
 * Execute o Notebook de Treinamento e Avaliação.
+
+### Execução Rápdida - Demonstração
+Acesse diretamente o notebook de construção do Gradio, execute totalmente e depois acesse a url do app gradio gerada e faça os teste.
+[Notebook Demonstração - Gradio](https://www.kaggle.com/code/homeriojr/sistematizacao-visao-computacional-gradio)
 
 ## 7. Declaração de Uso de Assistentes de IA
 
