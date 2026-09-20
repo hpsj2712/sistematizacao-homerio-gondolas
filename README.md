@@ -167,7 +167,7 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 
 Todos os resultados de teste (métricas, matrizes de confusão, amostras de inferência e logs) estão disponíveis no pacote:
 
-[eva_test_run.zip](link-do-arquivo-no-repositório)
+[eval_test_run.zip](eval_results_fase4.zip)
 
 
 ---
