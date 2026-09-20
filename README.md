@@ -40,7 +40,7 @@ No setor varejista (supermercados e atacados), a monitoria contínua de pratelei
 
 ## 📊 2. Dataset e Análise Exploratória dos Dados (EDA)
 
-O dataset utilizado foi derivado e curado a partir do *Retail Shelf Object Detection*, passando por um rigoroso processo de **Pruning de Qualidade** e reanotação geométrica automática.
+O dataset utilizado foi derivado e curado a partir do ![*Retail Shelf Object Detection*](https://universe.roboflow.com/retailshelfobjectdetection/retail-shelf-object-detection/dataset/2), passando por um rigoroso processo de **Pruning de Qualidade** e reanotação geométrica automática.
 
 ### Mapeamento das 4 Classes Estratégicas:
 * **0 - `garrafa`**: Bebidas, óleos, produtos de limpeza altos e cilíndricos.
