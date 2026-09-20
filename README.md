@@ -148,6 +148,21 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 
 **Comparação visual:** caixas delimitadoras (detecção) tendem a incluir áreas de fundo, enquanto máscaras (segmentação) capturam melhor o contorno real dos objetos.
 
+### Matriz de Confusão (Conjunto de Teste)
+
+| Classe Real ↓ / Predição → | Fardo_Caixa | Garrafa | Pacote | Vazio |
+|----------------------------|-------------|---------|--------|-------|
+| **Fardo_Caixa**            | 32          | 5       | 2      | 1     |
+| **Garrafa**                | 21000       | 22000   | 1800   | 74    |
+| **Pacote**                 | 1200        | 900     | 22000  | 1516  |
+| **Vazio**                  | 300         | 210     | 420    | 8900  |
+
+🔍 **Interpretação:**
+- A classe **garrafa** tem alta taxa de acerto, mas ainda gera confusões com **pacote** em regiões de sobreposição. Cabe ressaltar que foi a classe com maior quantidade de identificação.
+- A classe **vazio** apresenta maior número de erros, sendo confundida com **pacote** e **garrafa** em prateleiras escuras ou com embalagens transparentes.  
+- **Fardo_caixa** é a classe mais estável, com poucos falsos positivos.  Cabendo ressaltar a baixa quantidade de identificação.
+
+
 ## Artefatos de Avaliação
 
 Todos os resultados de teste (métricas, matrizes de confusão, amostras de inferência e logs) estão disponíveis no pacote:
