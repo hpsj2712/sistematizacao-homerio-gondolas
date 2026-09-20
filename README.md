@@ -40,7 +40,7 @@ No setor varejista (supermercados e atacados), a monitoria contínua de pratelei
 
 ## 📊 2. Dataset e Análise Exploratória dos Dados (EDA)
 
-O dataset utilizado foi derivado e curado a partir do ![*Retail Shelf Object Detection*](https://universe.roboflow.com/retailshelfobjectdetection/retail-shelf-object-detection/dataset/2), passando por um rigoroso processo de **Pruning de Qualidade** e reanotação geométrica automática.
+O dataset utilizado foi derivado e curado a partir do *Retail Shelf Object Detection*, disponível por licença publica em [https://universe.roboflow.com/retailshelfobjectdetection/retail-shelf-object-detection/dataset/2]. Este dataset, que possuia apenas duas classes: objetc (referente a objeto detectado) e empty(espaço vazio) foi analisado em busca das imagens, filtrado e reanotado para ser utilizado neste projeto.
 
 ### Mapeamento das 4 Classes Estratégicas:
 * **0 - `garrafa`**: Bebidas, óleos, produtos de limpeza altos e cilíndricos.
@@ -51,8 +51,10 @@ O dataset utilizado foi derivado e curado a partir do ![*Retail Shelf Object Det
 ### Metodologia de Tratamento dos Dados:
 1. **Filtro de Nitidez (Laplaciano)**: Seleção das **TOP 450 imagens** de maior qualidade com base na pontuação:
    $$\text{Score} = \text{Variância(Laplaciano)} \times (1 + 0.05 \times \text{Nº de Objetos})$$
-2. **Divisão Rígida (Splits)**: 70% Treino | 15% Validação | 15% Teste (Inédito).
-3. **Geração de Máscaras com SAM**: Utilização do **MobileSAM** para conversão de Bounding Boxes em polígonos de segmentação binária.
+   O dataset original possui 1148 imagens distribuidas entre train, valid, test; deste optamos buscar as melhores imagens em qualidade e contagem de objetos anotados apenas do conjunto informado como treino(train). 
+   
+3. **Divisão Rígida (Splits)**: 70% Treino | 15% Validação | 15% Teste (Inédito).
+4. **Geração de Máscaras com SAM**: Utilização do **MobileSAM** para conversão de Bounding Boxes em polígonos de segmentação binária.
 
 🔗 **Link do Dataset Oficial no Kaggle:** [homeriojr/sistematizacao-visao-computacional](https://www.kaggle.com/datasets/homeriojr/sistematizacao-visao-computacional)  
 🏋️ **Link dos Pesos Treinados no Kaggle:** [homeriojr/sistematizacao-visao-yolo11-retail-shelf-weights](https://www.kaggle.com/datasets/homeriojr/sistematizacao-visao-yolo11-retail-shelf-weights)
