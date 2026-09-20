@@ -12,11 +12,9 @@
 
 ---
 
-## 👥 Integrantes do Grupo
+## 👥 Trabalho Individual
 
 * **Homério Parreira da Silva Junior** — *Desenvolvimento, Pipeline e Modelagem*
-* *[Nome do Integrante 2]*
-* *[Nome do Integrante 3]*
 
 ---
 
@@ -103,5 +101,14 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 ## 🛠️ 6. Como Reproduzir este Projeto (Passo a Passo)
 
 ### Pré-requisitos:
-```bash
-pip install ultralytics opencv-python matplotlib seaborn pandas
+Acesso ao Kaggle
+
+### Execução do Pipeline no Kaggle/Colab:
+
+* Abra os Notebooks no ambiente Kaggle GPU.
+
+* Certifique-se de montar o dataset homeriojr/sistematizacao-visao-computacional.
+
+* Execute o Notebook de Pré-processamento e Geração de Máscaras via SAM.
+
+* Execute o Notebook de Treinamento e Avaliação.
