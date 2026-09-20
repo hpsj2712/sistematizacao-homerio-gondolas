@@ -1,0 +1,4 @@
+Modelo / Tarefa,mAP@0.5,mAP@0.5:0.95 (IoU),Precisão,Recall
+YOLO11 Detecção (Box),0.4589,0.257,0.5398,0.441
+YOLO11 Segmentação (Box),0.4891,0.3198,0.5246,0.474
+YOLO11 Segmentação (Mask),0.4624,0.2356,0.5079,0.4542
