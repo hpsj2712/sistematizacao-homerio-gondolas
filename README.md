@@ -148,19 +148,22 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 
 **Comparação visual:** caixas delimitadoras (detecção) tendem a incluir áreas de fundo, enquanto máscaras (segmentação) capturam melhor o contorno real dos objetos.
 
-### Matriz de Confusão (Conjunto de Teste)
+###  Matrizes de Confusão (Conjunto de Teste)
 
-| Classe Real ↓ / Predição → | Fardo_Caixa | Garrafa | Pacote | Vazio |
-|----------------------------|-------------|---------|--------|-------|
-| **Fardo_Caixa**            | 32          | 5       | 2      | 1     |
-| **Garrafa**                | 21000       | 22000   | 1800   | 74    |
-| **Pacote**                 | 1200        | 900     | 22000  | 1516  |
-| **Vazio**                  | 300         | 210     | 420    | 8900  |
+Abaixo estão as matrizes de confusão normalizadas obtidas nos testes finais:
 
-🔍 **Interpretação:**
-- A classe **garrafa** tem alta taxa de acerto, mas ainda gera confusões com **pacote** em regiões de sobreposição. Cabe ressaltar que foi a classe com maior quantidade de identificação.
-- A classe **vazio** apresenta maior número de erros, sendo confundida com **pacote** e **garrafa** em prateleiras escuras ou com embalagens transparentes.  
-- **Fardo_caixa** é a classe mais estável, com poucos falsos positivos.  Cabendo ressaltar a baixa quantidade de identificação.
+#### YOLO11 Detecção (Box)
+![Confusion Matrix Detecção](eval_results_fase4/detect_test_run/confusion_matrix_normalized.png)
+
+#### YOLO11 Segmentação (Mask)
+![Confusion Matrix Segmentação](eval_results_fase4/segment_test_run/confusion_matrix_normalized.png)
+
+ **Interpretação:**
+- **Garrafa**: mantém alta taxa de acerto, mas ainda gera confusões com **pacote** em regiões de sobreposição.  
+- **Pacote**: apresenta confusões frequentes com **vazio**, principalmente em prateleiras inferiores ou com iluminação irregular.  
+- **Vazio**: continua sendo a classe mais crítica, com falsos positivos em áreas com reflexos ou embalagens transparentes.  
+- **Fardo_caixa**: classe mais estável, mas com baixa representatividade no dataset, o que limita a robustez estatística.  
+
 
 
 ### 🧠 Inferência Visual no Cenário Real
