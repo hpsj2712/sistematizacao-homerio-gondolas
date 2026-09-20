@@ -133,16 +133,26 @@ Avaliação realizada no conjunto de teste inédito (nunca visto pelo modelo dur
 | **YOLO11 Segmentação (Mask)** | **0.4831** | **0.2553** | **0.5263** | **0.4722** |
 
 ### Insights Principais:
-- O aprendizado multitarefa da **Segmentação impulsionou a precisão da caixa**, aumentando o $mAP@0.5$ de **37,84%** para **50,80%**.
-- O modelo apresentou desempenho sólido na identificação e delimitação exata de pacotes e garrafas.
+**Impacto da reanotação:** a qualidade das anotações foi decisiva. O mAP@0.5 subiu de 37,8% para 50,8%, mostrando que dados bem anotados são tão importantes quanto o modelo.
+
+**Segmentação vs. Detecção:** a segmentação trouxe ganhos na precisão de contorno, especialmente em garrafas e pacotes sobrepostos. Isso reduz falsos positivos em áreas de prateleira com produtos compactados.
+
+**Recall mais alto:** o modelo reanotado conseguiu recuperar mais objetos, reduzindo omissões em prateleiras densas.
+
+**Desafios persistentes:** a classe “vazio” continua sendo a mais difícil, com confusões frequentes em regiões escuras ou com embalagens transparentes.
+
+### Análise Crítica:
+**Falsos Positivos:** comuns em áreas com produtos muito próximos, onde o modelo confunde bordas de pacotes com espaços vazios.
+
+**Falsos Negativos:** ocorrem em prateleiras inferiores com iluminação fraca, onde pacotes pequenos passam despercebidos.
+
+**Comparação visual:** caixas delimitadoras (detecção) tendem a incluir áreas de fundo, enquanto máscaras (segmentação) capturam melhor o contorno real dos objetos.
 
 ## Artefatos de Avaliação
 
 Todos os resultados de teste (métricas, matrizes de confusão, amostras de inferência e logs) estão disponíveis no pacote:
 
 [eva_test_run.zip](link-do-arquivo-no-repositório)
-
-Isso garante reprodutibilidade e transparência dos experimentos realizados.
 
 
 ---
@@ -171,7 +181,7 @@ Acesso ao Kaggle
 
 * Execute o Notebook de Treinamento e Avaliação.
 
-## 7. 4declaração de Uso de Assistentes de IA
+## 7. Declaração de Uso de Assistentes de IA
 
 Foram utilizados na construção deste relatório e desenvolvimento do trabalho o apoio de assistentes de IA observando analise do autor quanto as informações apresentadas por tais agentes e atendido os critérios de ética e legais como não repasse de informações protegidas e/ou de terceiros. Os assistentes utilizados forma: 
 
