@@ -20,8 +20,8 @@
 
 ## Vídeo-Pitch e Demonstração do Sistema
 
-* **Link do Vídeo (YouTube / Drive):** [Cole o Link Aqui]
-* **Duração:** ~6 minutos
+* **Links dos Vídeos (YouTube):** [Apresentação Trabalho](https://youtu.be/1zIa91XEWfo), [Demonstração](https://youtube.com/shorts/tmAROaUVD1k)
+* **Duração:** 13 minutos (somados os dois videos)
 * **Conteúdo:** Apresentação da arquitetura, pipeline de dados, treino dos modelos e demonstração da inferência em tempo real com rastreamento de gôndola.
 
 ---
